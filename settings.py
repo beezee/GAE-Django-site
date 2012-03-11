@@ -17,12 +17,21 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.auth',
     'django.contrib.sessions',
+    'django.contrib.admin',
     'djangotoolbox',
     'autoload',
     'dbindexer',
-
+    'siteapp',
     # djangoappengine should come last, so it can override a few manage.py commands
     'djangoappengine',
+)
+
+STATIC_ROOT = ''
+
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    os.path.join(os.path.dirname(__file__), 'static'),
 )
 
 MIDDLEWARE_CLASSES = (
